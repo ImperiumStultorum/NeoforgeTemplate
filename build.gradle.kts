@@ -133,7 +133,7 @@ tasks {
 
     register("publishRelease") {
         if (project.version.toString().matches(snapshotRegex)) throw GradleException("Attempted to publish snapshot to release repository.")
-        dependsOn("publish${rootProject.name.replaceFirstChar(Char::uppercaseChar)}PublicationToReleaseRepository}")
+        dependsOn("publish${rootProject.name.replaceFirstChar(Char::uppercaseChar)}PublicationToReleaseRepository")
     }
 
     register("publishSnapshot") {
