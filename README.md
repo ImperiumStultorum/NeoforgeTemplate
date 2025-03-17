@@ -1,41 +1,17 @@
-# Kotlin MDK
+# Imperium Neoforge Template
 
-This is a fork of NeoForge's MDK that is configured to use Kotlin. The following modifications have been made:
-- Port existing Java code to Kotlin
-- Adjust necessary resources for running on Kotlin (i.e. depend on KFF)
-- Added an example Mixin to emphasize that Mixins should only be written in Java
+A fork of [Erdragh's Neoforge Kotlin MDK](https://github.com/Erdragh/Neoforge-Kotlin-MDK) that's tailored more to our preferences.
 
-> [!NOTE]
-> The Kotlin experience is not very good in Eclipse. The original MDK may be made to work with Eclipse as well,
-> but if you want to use Kotlin, the best choice is IntelliJ IDEA with the Minecraft Development Plugin.
+A vague list of changes follows:
+- Switch to using Gradle's kotlin DSL, roughly using [ColdStuff1's MCMod](https://github.com/Coldstuff1/MCMod) as a guide
+- Change the namespace of the example mod to `com.stultorum.mods.template` since nearly all mods by Imperium should use this namespace pattern
+- Remove most of the comments that I feel are redundant (and changing them to more concise reminders where I feel they aren't)
+- Updating the referenced Neoforge version and changing supported minecraft versions to `[1.21,1.21.2)`
+- Add `TODO`s where changes are known to be required
+- Add logic to publish to Imperium's maven
+- Set default license to LGPL-3.0 as most Imperium mods use it
+- Remove most of `ExampleMod`'s code
+- A few other opinionated changes
 
----
-
-Original README:
-
-Installation information
-=======
-
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions at [github](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
-
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
-
-> **Note**: For Eclipse, use tasks in `Launch Group` instead of ones founds in `Java Application`. A preparation task must run before launching the game. NeoGradle uses launch groups to do these subsequently.
-
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
-
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
-
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+It is worth noting that normally I would release a template as CC0 or Unlicense but since upstream is MIT I'm not sure that's possible. As such I'm simply going to keep upstreams license.
+If you are aware of problems with keeping upstream license or if it's possible to use one of the aforementioned licenses, do let me know.
